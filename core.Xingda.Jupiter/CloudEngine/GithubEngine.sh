@@ -3,7 +3,7 @@
 #Fetch the file system from Github and store it in the
 #src folder.
 #@author: Xingda Wang
-#@time:	18/02/2015
+#@date:	18/02/2015
 
 #Fetch file system from a given url
 function fetchFile {

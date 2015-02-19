@@ -3,3 +3,6 @@ log.Xingda.Jupiter/*
 
 #ignore all source files that need to be analysised
 src.Xingda.Jupiter/*
+
+#ignore text-based temporary fils
+*~

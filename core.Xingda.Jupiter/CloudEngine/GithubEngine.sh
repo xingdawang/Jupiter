@@ -9,6 +9,10 @@
 function fetchFile {
 	printf "Please enter url: "
 	read url
+	echo $(git clone $url)						#clone file from remote server
+	cd ..								#move to core.Xingda.Jupiter folder
+	sh LogRecorder.sh "Reading url from $url"			#take down log
+	cd CloudEngine							#move back to the current folder
 	echo $(git clone $url)
 }
 
@@ -28,6 +32,9 @@ function detectFolder {
 		if [ -d ${fileArray[i]} ];then				#if it is a directory (-d)
 			echo "${fileArray[i]}" "is a directory, and will be moved to src directory."
 			echo $(mv ${fileArray[i]} ../../src.Xingda.Jupiter)
+			cd ..						#move to core.Xingda.Jupiter folder
+			sh LogRecorder.sh "Moving ${fileArray[i]} to src.Xingda.Jupiter"
+			cd CloudEngine	
 		else
 			echo "${fileArray[i]} is not a directory."
 		fi

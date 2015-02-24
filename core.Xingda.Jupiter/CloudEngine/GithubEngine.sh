@@ -27,7 +27,7 @@ function detectFolder {
 	tempString=$(ls)						#read current directory file
 	fileArray=(${tempString})					#separate name by white space (/s)
 #	echo ${#fileArray[@]}						#file length
-	for i in "${!fileArray[@]}"					#add "!" to indicate content rather than an index
+	for i in "${!fileArray[@]}"					#add "!" to indicate content rather than an index number
 	do								#itrate to check whether a file is a folder
 		if [ -d ${fileArray[i]} ];then				#if it is a directory (-d)
 			echo "${fileArray[i]}" "is a directory, and will be moved to src directory."

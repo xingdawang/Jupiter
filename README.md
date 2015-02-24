@@ -1,5 +1,5 @@
 # Jupiter
-Jupirer is a tool for data mining the version histories of software systems, analysis the code to improve software quality
+Jupiter is a tool for data mining the version histories of software systems, analysis the code to improve software quality
 
 This project can work with existing data or extracting new data from version management system and bug reporting systems. The project will aim to build better bug prediction systems than currently exist.
 

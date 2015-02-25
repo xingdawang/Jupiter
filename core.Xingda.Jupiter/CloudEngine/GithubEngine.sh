@@ -9,11 +9,10 @@
 function fetchFile {
 	printf "Please enter url: "
 	read url
-	echo $(git clone $url)						#clone file from remote server
 	cd ..								#move to core.Xingda.Jupiter folder
 	sh LogRecorder.sh "Reading url from $url"			#take down log
 	cd CloudEngine							#move back to the current folder
-	echo $(git clone $url)
+	echo $(git clone $url)						#clone file from remote server
 }
 
 #After fetched the file, detect the folder

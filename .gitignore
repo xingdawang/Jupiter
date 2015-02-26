@@ -5,4 +5,4 @@ log.Xingda.Jupiter/*
 src.Xingda.Jupiter/*
 
 #ignore text-based temporary fils
-*~
+*.sh~

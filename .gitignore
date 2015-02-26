@@ -3,6 +3,6 @@ log.Xingda.Jupiter/*
 !log.Xingda.Jupiter/.gitkeep
 #ignore all source files that need to be analysised
 src.Xingda.Jupiter/*
-!src.Xingda.Jupiter/!.gitkeep
+!src.Xingda.Jupiter/.gitkeep
 #ignore text-based temporary fils
 *.sh~

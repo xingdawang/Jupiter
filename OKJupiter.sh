@@ -40,29 +40,35 @@ echo
 echo -e "$BoldGreenText********************************************************************************$escapeText"
 
 #record the operation into the log
-cd core.Xingda.Jupiter/					#take the launch information into the record		
+cd core.Xingda.Jupiter/								#take the launch information into the record		
 sh LogRecorder.sh "load Jupiter"
 cd ..
 
 #judge the parameters
-if [[ -z $1 && -z $2 ]];then				#judge whether the paramters have been entered
+if [[ -z $1 && -z $2 ]];then							#judge whether the paramters have been entered
 	echo -e "$RedText""Please Enter the paramter like the above format: $escapeText"
-elif [[ -z $2 ]];then					#if the second parameter is missing, remind the user
+elif [[ -z $2 ]];then								#if the second parameter is missing, remind the user
 	echo -e "$RedText""Missing the second parameter. $escapeText"
 fi
 
 #take command from the user
-if [[ $1 && $2 ]];then					#if both parameter is entered
+if [[ $1 && $2 ]];then								#if both parameter is entered
 	
-	#JAVA						#Java related
-	temp1=$1					#${temp1,,} can change all $1 characters into lower case
+	#JAVA									#Java related
+	temp1=$1								#${temp1,,} can change all $1 characters into lower case
 	if [[ ${temp1,,} == "java" ]];then		
 		temp2=$2
-		if [[ ${temp2,,} == "getfile" ]];then	#get file from github
+		if [[ ${temp2,,} == "getfile" ]];then				#get file from github (GithubEngine.sh)
 			#echo $PWD
 			cd core.Xingda.Jupiter/CloudEngine
 			#ls
 			sh GithubEngine.sh
+		elif [[ ${temp2,,} == "generategitlog" ]];then			#generate githublog (GitRefresher.sh)
+			cd core.Xingda.Jupiter/Refresher
+			echo $PWD
+			sh GitLogRefresher.sh "oneline"
+		else
+			echo -e "$MagentaText""Do not find the second parameter command, please refer to the mannul.$escapeText"			
 		fi
 
 	#Add further language here	

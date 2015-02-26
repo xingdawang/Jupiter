@@ -65,7 +65,6 @@ if [[ $1 && $2 ]];then								#if both parameter is entered
 			sh GithubEngine.sh
 		elif [[ ${temp2,,} == "generategitlog" ]];then			#generate githublog (GitRefresher.sh)
 			cd core.Xingda.Jupiter/Refresher
-			echo $PWD
 			sh GitLogRefresher.sh "oneline"
 		elif [[ ${temp2,,} == "onelinelog" ]];then			#get oneline log (GithubLog.log)
 			cd log.Xingda.Jupiter

@@ -75,6 +75,9 @@ if [[ $1 && $2 ]];then								#if both parameter is entered
 		elif [[ ${temp2,,} == "operationlog" ]];then			#get operation log (OperationLog.log)
 			cd log.Xingda.Jupiter
 			xdg-open OperationLog.log
+		elif [[ ${temp2,,} == "manualcompare" ]];then			#compare two SHAs manully (GitDiffComparer.sh)
+			cd core.Xingda.Jupiter/Operator/GitOperator
+			sh GitDiffComparer.sh
 		else
 			echo -e "$MagentaText""Do not find the second parameter command, please refer to the mannul.$escapeText"			
 		fi

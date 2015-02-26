@@ -12,9 +12,15 @@ cat << EOF
 EOF
 
 if [[ $1 == "oneline" ]];then
-	xdg-open ../../../log.Xingda.Jupiter/GithubLog.log
+	xdg-open ../../../log.Xingda.Jupiter/GithubLog.log				#open the Github.log using system default tool
+	cd ../../
+	sh LogRecorder.sh "Open GithubLog.log"						#record operation log	
 elif [[ $1 == "details" ]]; then
 	xdg-open ../../../log.Xingda.Jupiter/GithubLogDetails.log
+	cd ../../
+	sh LogRecorder.sh "Open GithubLogDetails.log"
 else
 	echo "Invalid input, need or more than one parameter"
+	cd ../../
+	sh LogRecorder.sh "Fail to fetch the log due to invalid input or no open tool"
 fi

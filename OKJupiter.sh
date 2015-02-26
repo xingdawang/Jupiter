@@ -40,9 +40,9 @@ echo
 echo -e "$BoldGreenText********************************************************************************$escapeText"
 
 #record the operation into the log
-cd core.Xingda.Jupiter/								#take the launch information into the record		
-sh LogRecorder.sh "load Jupiter"
-cd ..
+#cd core.Xingda.Jupiter/								#take the launch information into the record		
+#sh LogRecorder.sh "load Jupiter"
+#cd ..
 
 #judge the parameters
 if [[ -z $1 && -z $2 ]];then							#judge whether the paramters have been entered
@@ -78,6 +78,9 @@ if [[ $1 && $2 ]];then								#if both parameter is entered
 		elif [[ ${temp2,,} == "manualcompare" ]];then			#compare two SHAs manully (GitDiffComparer.sh)
 			cd core.Xingda.Jupiter/Operator/GitOperator
 			sh GitDiffComparer.sh
+		elif [[ ${temp2,,} == "classsummary" ]];then			#feedback of all classes compare result (GitClassComparer.sh)
+			cd core.Xingda.Jupiter/Operator/GitOperator/
+			bash GitClassSummary.sh
 		else
 			echo -e "$MagentaText""Do not find the second parameter command, please refer to the mannul.$escapeText"			
 		fi

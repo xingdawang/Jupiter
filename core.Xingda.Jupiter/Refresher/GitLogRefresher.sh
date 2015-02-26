@@ -14,7 +14,8 @@ do												#itrate to check whether a file is a folder
 		echo "${fileArray[i]}" "is a directory, and move into the this directory now."
 			cd ${fileArray[i]}							#move into the project folder
 			echo "$PWD"
-			git log --oneline > ../../log.Xingda.Jupiter/GithubLog.log
+			git log --oneline > ../../log.Xingda.Jupiter/GithubLog.log		#generate git log --oneline version
+			git log > ../../log.Xingda.Jupiter/GithubLogDetails.log
 		else
 			echo "${fileArray[i]} is not a directory."
 	fi

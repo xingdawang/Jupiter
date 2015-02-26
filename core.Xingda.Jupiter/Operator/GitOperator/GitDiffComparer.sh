@@ -20,3 +20,5 @@ do												#itrate to check whether a file is a folder
 			echo "$i is not a directory."
 	fi
 done
+cd ../../core.Xingda.Jupiter/									#write down the compare log
+sh LogRecorder.sh "Compare $startSHA and $endSHA manully"

@@ -67,6 +67,15 @@ if [[ $1 && $2 ]];then								#if both parameter is entered
 			cd core.Xingda.Jupiter/Refresher
 			echo $PWD
 			sh GitLogRefresher.sh "oneline"
+		elif [[ ${temp2,,} == "onelinelog" ]];then			#get oneline log (GithubLog.log)
+			cd log.Xingda.Jupiter
+			xdg-open GithubLog.log
+		elif [[ ${temp2,,} == "detailslog" ]];then			#get details log (GithubLogDetails.log)
+			cd log.Xingda.Jupiter
+			xdg-open GithubLogDetails.log
+		elif [[ ${temp2,,} == "operationlog" ]];then			#get operation log (OperationLog.log)
+			cd log.Xingda.Jupiter
+			xdg-open OperationLog.log
 		else
 			echo -e "$MagentaText""Do not find the second parameter command, please refer to the mannul.$escapeText"			
 		fi

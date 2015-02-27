@@ -81,6 +81,12 @@ if [[ $1 && $2 ]];then								#if both parameter is entered
 		elif [[ ${temp2,,} == "classsummary" ]];then			#feedback of all classes compare result (GitClassComparer.sh)
 			cd core.Xingda.Jupiter/Operator/GitOperator/
 			bash GitClassSummary.sh
+		elif [[ ${temp2,,} == "clearoperationlog" ]];then		#delete the operation log (OperationLog.log)
+			cd log.Xingda.Jupiter/
+			rm OperationLog.log
+		elif [[ ${temp2,,} == "clearcontent" ]];then			#delete working content and related files
+			cd core.Xingda.Jupiter/
+			bash ClearContent.sh
 		else
 			echo -e "$MagentaText""Do not find the second parameter command, please refer to the mannul.$escapeText"			
 		fi

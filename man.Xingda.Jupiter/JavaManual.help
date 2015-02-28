@@ -1,0 +1,57 @@
+JAVAMANUAL(1)			User Commands			JAVAMANUAL(1)
+
+
+NAME
+	java - stream Jupiter for executable and transforming command
+
+SYNOPSIS
+	java [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+DESCRIPTION
+	Java is one of the programming language that Jupiter supports. and java
+	is also used as the first keyword when operating Jupiter. The following
+	parameters provided is the second keywords  for  Jupiter  to  run  java
+	related functions. Both two keywords are case insensitive.
+
+	getFile
+
+		Clone source code url from internet
+
+	generateGitLog
+
+		Generate detailed log and brief log
+
+	onelineLog
+
+		Open brief log in system default editor
+
+	detailsLog
+
+		Open details log in system default editor
+
+	operationLog
+
+		Open the operation log in system defualt editor
+
+	chooseDate
+
+		Feedback the specif commits details log between the given dates
+
+	manualCompare
+
+		Manually compare the different between two given commit
+
+	classSummary
+
+		Make statistics on class changes and generate class summary log
+
+	clearOperationLog
+
+		Clear operation log
+
+	clearContent
+
+		Clear working content and related logs
+
+
+JAVAMANUAL 1.0			February 2015			JAVAMANUAL 1.0

@@ -59,11 +59,9 @@ if [[ $1 && $2 ]];then								#if both parameter is entered
 	if [[ ${temp1,,} == "java" ]];then		
 		temp2=$2
 		if [[ ${temp2,,} == "getfile" ]];then				#get file from github (GithubEngine.sh)
-			#echo $PWD
 			cd core.Xingda.Jupiter/CloudEngine
-			#ls
 			sh GithubEngine.sh
-		elif [[ ${temp2,,} == "generategitlog" ]];then			#generate githublog (GitRefresher.sh)
+		elif [[ ${temp2,,} == "generategitlog" ]];then			#generate githublog (GitLogRefresher.sh)
 			cd core.Xingda.Jupiter/Refresher
 			sh GitLogRefresher.sh "oneline"
 		elif [[ ${temp2,,} == "onelinelog" ]];then			#get oneline log (GithubLog.log)
@@ -78,7 +76,7 @@ if [[ $1 && $2 ]];then								#if both parameter is entered
 		elif [[ ${temp2,,} == "manualcompare" ]];then			#compare two SHAs manully (GitDiffComparer.sh)
 			cd core.Xingda.Jupiter/Operator/GitOperator
 			sh GitDiffComparer.sh
-		elif [[ ${temp2,,} == "classsummary" ]];then			#feedback of all classes compare result (GitClassComparer.sh)
+		elif [[ ${temp2,,} == "classsummary" ]];then			#feedback of all classes compare result (GitClassSummary.sh)
 			cd core.Xingda.Jupiter/Operator/GitOperator/
 			bash GitClassSummary.sh
 		elif [[ ${temp2,,} == "clearoperationlog" ]];then		#delete the operation log (OperationLog.log)
@@ -90,6 +88,9 @@ if [[ $1 && $2 ]];then								#if both parameter is entered
 		elif [[ ${temp2,,} == "openoperationlog" ]];then		#Open operation log (OperationLog.log)
 			cd log.Xingda.Jupiter/
 			xdg-open OperationLog.log
+		elif [[ ${temp2,,} == "choosedate" ]];then			#Return the specif log according to the given date (GitDateFetcher.sh)
+			cd core.Xingda.Jupiter/Operator/GitOperator/
+			bash GitDateFetcher.sh
 		else
 			echo -e "$MagentaText""Do not find the second parameter command, please refer to the mannul.$escapeText"			
 		fi

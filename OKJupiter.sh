@@ -85,12 +85,12 @@ if [[ $1 && $2 ]];then								#if both parameter is entered
 		elif [[ ${temp2,,} == "clearcontent" ]];then			#delete working content and related files (ClearContent.sh)
 			cd core.Xingda.Jupiter/
 			bash ClearContent.sh
-		elif [[ ${temp2,,} == "openoperationlog" ]];then		#Open operation log (OperationLog.log)
-			cd log.Xingda.Jupiter/
-			xdg-open OperationLog.log
 		elif [[ ${temp2,,} == "choosedate" ]];then			#Return the specif log according to the given date (GitDateFetcher.sh)
 			cd core.Xingda.Jupiter/Operator/GitOperator/
 			bash GitDateFetcher.sh
+		elif [[ ${temp2,,} == "help" ]];then				#Open help manual (JavaManual.help)
+			cd man.Xingda.Jupiter/
+			more JavaManual.help
 		else
 			echo -e "$MagentaText""Do not find the second parameter command, please refer to the mannul.$escapeText"			
 		fi

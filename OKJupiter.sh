@@ -35,7 +35,7 @@ echo -e "$BoldYellowText""Only$escapeText""$BoldRedText two$escapeText""$BoldYel
 echo
 echo -e "		$BoldGreenText ./OKJupiter java getFile $escapeText""		""$YellowText(case insensitive)$escapeText"
 echo
-echo -e "$BoldYellowText""For more information see manul please. (e.g. ./OKJupiter java manual) $escapeText"
+echo -e "$BoldYellowText""For more information see manul please. (e.g. ./OKJupiter java help) $escapeText"
 echo
 echo -e "$BoldGreenText********************************************************************************$escapeText"
 
